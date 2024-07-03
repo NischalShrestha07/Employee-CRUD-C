@@ -12,7 +12,12 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        //
+        $employees = Employee::all();
+
+        return view('employee.index', [
+            'employees' => $employees
+
+        ]);
     }
 
     /**
@@ -37,7 +42,7 @@ class EmployeeController extends Controller
         $employee->name = $request->input('name');
         $employee->email = $request->input('email');
         $employee->save();
-        return redirect()->route('employee.create')->with('success', 'Article saved successfully. ');
+        return redirect()->route('employee.index')->with('success', 'Details added successfully. ');
     }
 
 
@@ -67,6 +72,7 @@ class EmployeeController extends Controller
      */
     public function destroy(Employee $employee)
     {
-        //
+        $employee->delete();
+        return redirect()->route('employee.index')->with('errorMsg', 'Details Deleted Successfully.');
     }
 }
