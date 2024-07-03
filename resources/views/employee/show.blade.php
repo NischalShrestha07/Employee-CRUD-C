@@ -38,6 +38,7 @@
                     <div class="card-body">
                         <h2>Name of Employe: {{$employee->name}}</h2>
                         <h2>Email of Employe: {{$employee->email}}</h2>
+                        <h2>Phone NO: of Employe: {{$employee->tel}}</h2>
                         <h2>Employe Created: {{$employee->created_at}}</h2>
                     </div>
                 </div>

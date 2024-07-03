@@ -38,6 +38,11 @@
                                 <input type="email" value="{{old('email',$employee->email)}}" name="email"
                                     placeholder="Enter Your Email" class="form-control">
                             </div>
+                            <div class="form-group m-3 p-1">
+                                <label for="" class="h3">Phone Number</label>
+                                <input type="tel" value="{{old('tel',$employee->tel)}}" name="tel"
+                                    placeholder="Enter Your Phone Number" class="form-control">
+                            </div>
 
                             <div class="form-group m-4 ">
                                 <button class="btn btn-primary">Update</button>

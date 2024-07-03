@@ -42,9 +42,9 @@
 
                 <div class="card">
                     <h1 class="bg-light text-center text-success">CRUD IN LARAVEL</h1>
-                    <div class="card-header bg-dark text-white">
+                    <div class="card-header bg-dark text-white d-flex justify-content-between">
                         <h3>List of Employees</h3>
-
+                        <a href="{{route('employee.create')}}" class="btn btn-success ">Create</a>
                     </div>
                     <div class="card-body">
                         <table class="table">
@@ -54,6 +54,7 @@
                                     <th>ID</th>
                                     <th>Name</th>
                                     <th>Email</th>
+                                    <th>Phone Number</th>
                                     <th>Operations</th>
                                 </tr>
                             </thead>
@@ -63,6 +64,7 @@
                                     <td>{{$employee->id}}</td>
                                     <td>{{$employee->name}}</td>
                                     <td>{{$employee->email}}</td>
+                                    <td>{{$employee->tel}}</td>
                                     <td class="d-flex">
                                         <a href="{{route('employee.show',[$employee->id])}}"
                                             class=" btn btn-warning ">Show</a>

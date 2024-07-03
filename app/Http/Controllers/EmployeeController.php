@@ -41,6 +41,7 @@ class EmployeeController extends Controller
 
         $employee->name = $request->input('name');
         $employee->email = $request->input('email');
+        $employee->tel = $request->input('tel');
         $employee->save();
         return redirect()->route('employee.index')->with('success', 'Your Details added successfully. ');
     }
@@ -73,6 +74,7 @@ class EmployeeController extends Controller
         //    $employee = new Employee; this is not paste from the store cause we are just updating the data not creating a new details.
         $employee->name = $request->input('name');
         $employee->email = $request->input('email');
+        $employee->tel = $request->input('tel');
         $employee->save();
         return redirect()->route('employee.index')->with('warning', 'Your Details updated successfully. ');
     }
