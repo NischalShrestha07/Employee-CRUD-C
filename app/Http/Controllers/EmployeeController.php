@@ -29,11 +29,15 @@ class EmployeeController extends Controller
     public function store(Request $request)
     {
         $employee = new Employee;
+        // $employee->name = $request->name;
+        // $employee->email = $request->email;
+
+        //this both above and below code are working(okey)
+
         $employee->name = $request->input('name');
         $employee->email = $request->input('email');
-        $employee->tel = $request->input('tel');
         $employee->save();
-        return redirect()->route('employee.create');
+        return redirect()->route('employee.create')->with('success', 'Article saved successfully. ');
     }
 
 

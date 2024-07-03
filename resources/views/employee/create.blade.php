@@ -22,23 +22,21 @@
 
                     </div>
                     <div class="card-body">
-                        <form action="" method="POST">
-                            {{-- <form action="{{route('employee.store')}}" method="POST"> --}}
-                                @csrf
-                                <div class="form-group m-3 p-1">
-                                    <label for="" class="h3">Name</label>
-                                    <input type="text" name="name" placeholder="Enter Your Name" class="form-control">
-                                </div>
-                                <div class="form-group m-3 p-1">
-                                    <label for="" class="h3">Email</label>
-                                    <input type="email" name="email" placeholder="Enter Your Email"
-                                        class="form-control">
-                                </div>
+                        <form action="{{route('employee.store')}}" method="POST">
+                            @csrf
+                            <div class="form-group m-3 p-1">
+                                <label for="" class="h3">Name</label>
+                                <input type="text" name="name" placeholder="Enter Your Name" class="form-control">
+                            </div>
+                            <div class="form-group m-3 p-1">
+                                <label for="" class="h3">Email</label>
+                                <input type="email" name="email" placeholder="Enter Your Email" class="form-control">
+                            </div>
 
-                                <div class="form-group m-4 ">
-                                    <button class="btn btn-primary">+ADD</button>
-                                </div>
-                            </form>
+                            <div class="form-group m-4 ">
+                                <button class="btn btn-primary">+ADD</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
