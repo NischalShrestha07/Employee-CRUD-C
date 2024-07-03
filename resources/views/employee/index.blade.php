@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="{{ asset('public/css/bootstrap.css') }}">
     <style>
-        .btn-warning {
+        .btn {
             margin-right: 4px;
         }
     </style>
@@ -33,6 +33,13 @@
                 <div class="alert alert-danger">{{session('errorMsg')}}
                 </div>
                 @endif
+
+                {{-- executes when the data is updated --}}
+                @if (@session('warning'))
+                <div class="alert alert-warning">{{session('warning')}}
+                </div>
+                @endif
+
                 <div class="card">
                     <div class="card-header bg-dark text-white">
                         <h3>List of Employees</h3>
@@ -58,6 +65,10 @@
                                     <td class="d-flex">
                                         <a href="{{route('employee.show',[$employee->id])}}"
                                             class=" btn btn-warning ">Show</a>
+
+                                        <a href="{{route('employee.edit',[$employee->id])}}"
+                                            class=" btn btn-primary ">Edit</a>
+
                                         <form action="{{route('employee.destroy',[$employee->id])}}" method="POST">
                                             {{-- [$employee->id] helps to fetch the id of the datas--}}
                                             @csrf

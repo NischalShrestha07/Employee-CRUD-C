@@ -32,10 +32,12 @@
                     <div class="card-header bg-dark text-white">
                         <h3>Details of Employees</h3>
                         <h4>ID of Employee: {{$employee->id}}</h4>
+                        <a href="{{route('employee.index')}}" class="btn btn-info ">BACK</a>
                     </div>
                     <div class="card-body">
                         <h2>Name of Employe: {{$employee->name}}</h2>
                         <h2>Email of Employe: {{$employee->email}}</h2>
+                        <h2>Employe Created: {{$employee->created_at}}</h2>
                     </div>
                 </div>
             </div>

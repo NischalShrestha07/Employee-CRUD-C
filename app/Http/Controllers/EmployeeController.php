@@ -59,7 +59,10 @@ class EmployeeController extends Controller
      */
     public function edit(Employee $employee)
     {
-        //
+        return view('employee.edit', [
+            'employee' => $employee //this defines the variable $employee
+
+        ]);
     }
 
     /**
@@ -67,7 +70,11 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, Employee $employee)
     {
-        //
+        //    $employee = new Employee; this is not paste from the store cause we are just updating the data not creating a new details.
+        $employee->name = $request->input('name');
+        $employee->email = $request->input('email');
+        $employee->save();
+        return redirect()->route('employee.index')->with('warning', 'Your Details updated successfully. ');
     }
 
     /**
