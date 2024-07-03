@@ -31,11 +31,11 @@ class EmployeeController extends Controller
         $employee = new Employee;
         $employee->name = $request->input('name');
         $employee->email = $request->input('email');
+        $employee->tel = $request->input('tel');
+        $employee->save();
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(Employee $employee)
     {
         //
