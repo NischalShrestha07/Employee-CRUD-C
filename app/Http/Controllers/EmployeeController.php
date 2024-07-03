@@ -42,13 +42,16 @@ class EmployeeController extends Controller
         $employee->name = $request->input('name');
         $employee->email = $request->input('email');
         $employee->save();
-        return redirect()->route('employee.index')->with('success', 'Details added successfully. ');
+        return redirect()->route('employee.index')->with('success', 'Your Details added successfully. ');
     }
 
 
     public function show(Employee $employee)
     {
-        //
+        return view('employee.show', [
+            'employee' => $employee
+
+        ]);
     }
 
     /**
@@ -73,6 +76,6 @@ class EmployeeController extends Controller
     public function destroy(Employee $employee)
     {
         $employee->delete();
-        return redirect()->route('employee.index')->with('errorMsg', 'Details Deleted Successfully.');
+        return redirect()->route('employee.index')->with('errorMsg', 'Your Details Deleted Successfully.');
     }
 }

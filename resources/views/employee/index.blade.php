@@ -10,6 +10,11 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{{ asset('public/css/bootstrap.css') }}">
+    <style>
+        .btn-warning {
+            margin-right: 4px;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,8 +47,6 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Operations</th>
-
-
                                 </tr>
                             </thead>
                             <tbody>
@@ -52,7 +55,9 @@
                                     <td>{{$employee->id}}</td>
                                     <td>{{$employee->name}}</td>
                                     <td>{{$employee->email}}</td>
-                                    <td>
+                                    <td class="d-flex">
+                                        <a href="{{route('employee.show',[$employee->id])}}"
+                                            class=" btn btn-warning ">Show</a>
                                         <form action="{{route('employee.destroy',[$employee->id])}}" method="POST">
                                             {{-- [$employee->id] helps to fetch the id of the datas--}}
                                             @csrf
