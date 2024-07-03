@@ -44,7 +44,7 @@
                     <h1 class="bg-light text-center text-success">CRUD IN LARAVEL</h1>
                     <div class="card-header bg-dark text-white d-flex justify-content-between">
                         <h3>List of Employees</h3>
-                        <a href="{{route('employee.create')}}" class="btn btn-success ">Create</a>
+                        <a href="{{route('employee.create')}}" class="btn btn-success ">+Add Employee</a>
                     </div>
                     <div class="card-body">
                         <table class="table">

@@ -23,7 +23,9 @@
 
                     </div>
                     <div class="card-body">
-                        <form action="{{route('employee.store')}}" method="POST">
+                        <form action="{{route('employee.store')}}" method="POST" enctype="multipart/form-data">
+                            {{-- enctype="multipart/form-data" this should be included when you are dealing with images
+                            --}}
                             @csrf
                             <div class="form-group m-3 p-1">
                                 <label for="" class="h3">Name</label>
@@ -37,7 +39,10 @@
                                 <label for="" class="h3">Phone Number</label>
                                 <input type="tel" name="tel" placeholder="Enter Your Phone Number" class="form-control">
                             </div>
-
+                            <div class="form-group m-3 p-1">
+                                <label for="" class="h3">Image</label>
+                                <input type="file" name="image_path" class="form-control">
+                            </div>
                             <div class="form-group m-4 ">
                                 <button class="btn btn-primary">+ADD</button>
                             </div>

@@ -75,6 +75,17 @@ class EmployeeController extends Controller
         $employee->name = $request->input('name');
         $employee->email = $request->input('email');
         $employee->tel = $request->input('tel');
+        if ($request->hasFile('image_path')) {
+            $file = $request->file('image_path');
+            $extension = $file->getClientOriginalExtension();
+            $fileName = time() . '.' . $extension;
+            $file->move('uploads/employees', $fileName);
+            $employee->image_path = $fileName;
+
+            # code...
+        }
+
+
         $employee->save();
         return redirect()->route('employee.index')->with('warning', 'Your Details updated successfully. ');
     }
