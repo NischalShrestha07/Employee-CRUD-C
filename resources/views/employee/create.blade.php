@@ -13,7 +13,34 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        <h3>Create Employee</h3>
 
+                    </div>
+                    <div class="card-body">
+                        <form action="{{route('employee.store')}}" method="POST">
+                            @csrf
+                            <div class="form-group">
+                                <label for="">Name</label>
+                                <input type="text" name="name" placeholder="Enter Your Name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input type="email" name="email" placeholder="Enter Your Email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary">+ADD</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
