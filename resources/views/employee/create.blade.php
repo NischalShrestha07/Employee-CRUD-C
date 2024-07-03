@@ -34,11 +34,7 @@
                                     <input type="email" name="email" placeholder="Enter Your Email"
                                         class="form-control">
                                 </div>
-                                <div class="form-group m-3 p-1">
-                                    <label for="" class="h3">Phone Number</label>
-                                    <input type="tel" name="tel" placeholder="Enter Your Phone Number"
-                                        class="form-control">
-                                </div>
+
                                 <div class="form-group m-4 ">
                                     <button class="btn btn-primary">+ADD</button>
                                 </div>

@@ -33,6 +33,7 @@ class EmployeeController extends Controller
         $employee->email = $request->input('email');
         $employee->tel = $request->input('tel');
         $employee->save();
+        return redirect()->route('employee.create');
     }
 
 
