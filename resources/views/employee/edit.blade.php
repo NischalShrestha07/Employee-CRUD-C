@@ -16,7 +16,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="card">
+                <div class="card d-flex">
+                    <h1 class="bg-light text-center text-success">CRUD IN LARAVEL</h1>
                     <div class="card-header bg-dark text-white">
                         <h3>Update Employee</h3>
 

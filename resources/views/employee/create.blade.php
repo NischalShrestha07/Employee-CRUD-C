@@ -17,6 +17,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
+                    <h1 class="bg-light text-center text-success">CRUD IN LARAVEL</h1>
                     <div class="card-header bg-dark text-white">
                         <h3>Create Employee</h3>
 
